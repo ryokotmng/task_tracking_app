@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Task List | Task Management App</title>
+</head>
+<body>
+<h1>Task List</h1>
+<table>
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Task</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="task: ${taskList}">
+        <th th:text="${task.id}">(id)</th>
+        <td th:text="${task.summary}">(summary)</td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
